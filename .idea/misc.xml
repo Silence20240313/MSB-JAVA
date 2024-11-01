@@ -9,12 +9,15 @@
         <option value="$PROJECT_DIR$/TestJarProject/src/main/resources/archetype-resources/pom.xml" />
         <option value="$PROJECT_DIR$/TestMyBatis1/pom.xml" />
         <option value="$PROJECT_DIR$/test22/pom.xml" />
+        <option value="$PROJECT_DIR$/TestMyBatis2/pom.xml" />
+        <option value="$PROJECT_DIR$/TestMyBatis02/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/TestJarProject/pom.xml" />
         <option value="$PROJECT_DIR$/TestMyBatis01/pom.xml" />
+        <option value="$PROJECT_DIR$/TestMyBatis2/pom.xml" />
         <option value="$PROJECT_DIR$/test22/pom.xml" />
       </set>
     </option>

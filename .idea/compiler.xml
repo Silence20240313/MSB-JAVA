@@ -5,6 +5,8 @@
       <directory url="file://$PROJECT_DIR$/TestJarProject/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/TestMyBatis01/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/TestMyBatis1/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/TestMyBatis2/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/TestMyBatis02/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -12,6 +14,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TestMyBatis1" />
+        <module name="TestMyBatis02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
@@ -19,6 +22,7 @@
       <module name="test22" target="1.8" />
       <module name="TestJarProject" target="1.8" />
       <module name="TestMyBatis01" target="1.8" />
+      <module name="TestMyBatis2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
