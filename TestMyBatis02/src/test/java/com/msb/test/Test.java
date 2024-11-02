@@ -24,10 +24,16 @@ public class Test {
         // 动态代理模式： BookMapper mapper = BookMapper 实现类  接口=实现类 多态
         BookMapper mapper = sqlSession.getMapper(BookMapper.class);
         Book b = new Book();
-        b.setName("活着");
-        b.setAuthor("余华");
-        Book book = mapper.selectOneBook3("活着",b);
-        System.out.println(book.getName());
+        b.setId(2);
+        b.setName("红高粱");
+        b.setAuthor("莫言");
+        b.setPrice(88.6);
+        int n = mapper.insertBook(b);
+        if (n > 0){
+            System.out.println("数据插入成功");
+        }
+        // 事务相关的操作
+        sqlSession.commit();
         // 关闭资源
         sqlSession.close();
     }

@@ -19,6 +19,10 @@
     <select id="selectOneBook3" resultType="com.msb.pojo.Book">
         select * from t_book where name = #{param1} and author = #{param2.author}
     </select>
+
+    <insert id="insertBook">
+        insert into t_book(id,name,author,price) values(#{id},#{name},#{author},#{price})
+    </insert>
 </mapper>
 
 

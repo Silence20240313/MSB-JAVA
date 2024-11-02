@@ -16,6 +16,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/msb/mapper/BookMapper.xml"/>
+        <mapper resource="com/msb/mapper/BookMapper.xml"></mapper>
     </mappers>
 </configuration>

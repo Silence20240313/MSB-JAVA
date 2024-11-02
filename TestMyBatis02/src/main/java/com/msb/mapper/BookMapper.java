@@ -9,4 +9,7 @@ public interface BookMapper {
     public abstract Book selectOneBook(String name,String author);
     public abstract Book selectOneBook2(Book book);
     public abstract Book selectOneBook3(String name,Book book);
+    public abstract int insertBook(Book book);
+
+
 }
