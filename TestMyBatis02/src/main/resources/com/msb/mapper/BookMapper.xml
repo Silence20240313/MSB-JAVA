@@ -15,6 +15,10 @@
     <select id="selectOneBook2" resultType="com.msb.pojo.Book">
         select * from t_book where name = #{name} and author = #{author}
     </select>
+
+    <select id="selectOneBook3" resultType="com.msb.pojo.Book">
+        select * from t_book where name = #{param1} and author = #{param2.author}
+    </select>
 </mapper>
 
 

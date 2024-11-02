@@ -26,7 +26,7 @@ public class Test {
         Book b = new Book();
         b.setName("活着");
         b.setAuthor("余华");
-        Book book = mapper.selectOneBook2(b);
+        Book book = mapper.selectOneBook3("活着",b);
         System.out.println(book.getName());
         // 关闭资源
         sqlSession.close();
