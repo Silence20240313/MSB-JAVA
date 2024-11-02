@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface BookMapper {
     List selectAllBooks();
+    public abstract Book selectOneBook(String name,String author);
 }

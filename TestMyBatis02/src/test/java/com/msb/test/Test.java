@@ -23,12 +23,8 @@ public class Test {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         // 动态代理模式： BookMapper mapper = BookMapper 实现类  接口=实现类 多态
         BookMapper mapper = sqlSession.getMapper(BookMapper.class);
-        List list = mapper.selectAllBooks();
-        // 遍历
-        for (int i = 0; i <= list.size() - 1 ; i++) {
-            Book b = (Book)list.get(i);
-            System.out.println(b.getName());
-        }
+        Book book = mapper.selectOneBook("活着","余华");
+        System.out.println(book.getName());
         // 关闭资源
         sqlSession.close();
     }

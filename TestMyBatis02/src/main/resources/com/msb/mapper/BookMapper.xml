@@ -7,6 +7,10 @@
     <select id="selectAllBooks" resultType="com.msb.pojo.Book">
         select * from t_book
     </select>
+
+    <select id="selectOneBook" resultType="com.msb.pojo.Book">
+        select * from t_book where name = #{arg0} and author = #{arg1}
+    </select>
 </mapper>
 
 
