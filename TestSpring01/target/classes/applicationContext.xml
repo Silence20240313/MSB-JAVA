@@ -3,12 +3,24 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id = "b" class = "com.msb.pojo.Book">
+<!--    <bean id = "b" class = "com.msb.pojo.Book">
         <property name="id" value="1"></property>
         <property name="name" value="活着"></property>
-    </bean>
+    </bean>-->
     <bean id = "b2" class = "com.msb.pojo.Book">
         <property name="id" value="2"></property>
         <property name="name" value="红高粱"></property>
     </bean>
+
+    <bean id = "boy" class = "com.msb.pojo.Boy">
+        <property name="age" value="22"></property>
+        <property name="name" value="小明"></property>
+    </bean>
+
+    <bean id = "girl" class = "com.msb.pojo.Girl">
+        <property name="age" value="19"></property>
+        <property name="name" value="露露"></property>
+        <property name="boyfriend" ref="boy"></property>
+    </bean>
+
 </beans>
