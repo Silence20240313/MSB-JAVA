@@ -9,7 +9,7 @@ public class Test {
         // 创建spring容器
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         // 获取对象
-        Book book = (Book)context.getBean("b");
+        Book book = (Book)context.getBean("b2");
         // 打印对象的信息
         System.out.println(book.getName() + "---" + book.getId());
     }

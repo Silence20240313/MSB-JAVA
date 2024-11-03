@@ -7,4 +7,8 @@
         <property name="id" value="1"></property>
         <property name="name" value="活着"></property>
     </bean>
+    <bean id = "b2" class = "com.msb.pojo.Book">
+        <property name="id" value="2"></property>
+        <property name="name" value="红高粱"></property>
+    </bean>
 </beans>
