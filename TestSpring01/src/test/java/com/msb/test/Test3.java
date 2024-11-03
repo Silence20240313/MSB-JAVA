@@ -12,7 +12,9 @@ public class Test3 {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         // 获取对象
         Girl g = (Girl)context.getBean("girl");
-        // 打印对象的信息
-        System.out.println("女孩名字:"+g.getName()+",女孩的男朋友的名字是："+g.getBoyfriend().getName());
+        System.out.println(g.getAge());
+        System.out.println(g.getName());
+        System.out.println(g.getBoyfriend().getAge());
+        System.out.println(g.getBoyfriend().getName());
     }
 }

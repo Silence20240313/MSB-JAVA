@@ -1,7 +1,13 @@
 package com.msb.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Boy {
+    @Value("21")
     private int age;
+    @Value("小明")
     private String name;
 
     public int getAge() {
@@ -26,5 +32,13 @@ public class Boy {
     }
 
     public Boy() {
+    }
+
+    @Override
+    public String toString() {
+        return "Boy{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
