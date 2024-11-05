@@ -12,7 +12,7 @@
   <!-- 配置 Spring 的上下文参数 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/applicationContext.xml</param-value>
+    <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
 
   <!-- 配置 Spring MVC 的前端控制器 -->
@@ -21,7 +21,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>/WEB-INF/springmvc.xml</param-value>
+      <param-value>classpath:springmvc.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
