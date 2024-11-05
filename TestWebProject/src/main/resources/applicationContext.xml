@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 连接数据库，获取数据源，配置数据源，设置数据库连接的四个参数 -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <!-- 利用setter方法完成属性注入，四个参数名固定的，注意源码中虽然没有driverClassName属性 -->
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/wiki?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+    <!-- 获取SqlSessionFactory对象 -->
+    <!-- 以前的SqlSessionFactory都是在测试代码中我们自己创建的，但是现在不用了，整合包中提供的对于SqlSessionFactory的配置 -->
+    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 注入数据源 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 给包下类起别名 -->
+        <property name="typeAliasesPackage" value="com.msb.pojo"/>
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+
+    </bean>
+
+    <!-- 扫描mapper文件 -->
+    <!-- 设置扫描哪个包，进行接口绑定 -->
+    <!-- 所有Mapper接口代理对象都能创建出来，可以直接从容器中获取出来 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 和SqlSessionFactory产生联系，以前我们都靠sqlSession.getMapper(BookMapper.class)来获取代理对象 -->
+        <!-- 现在通过工厂实现sqlSession来调用mapper，所以这里一定要注入工厂 -->
+        <!-- 注意这里sqlSessionFactoryBeanName类型为string，所以value加工厂名字过来就行了 -->
+        <property name="sqlSessionFactoryBeanName" value="factory"/>
+        <!-- 扫描的包 -->
+        <property name="basePackage" value="com.msb.mapper"/>
+    </bean>
+
+    <context:component-scan base-package="com.msb.service"></context:component-scan>
+
+
+</beans>

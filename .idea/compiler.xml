@@ -14,9 +14,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="TestWebProject" />
+        <module name="TestMyBatis02" />
         <module name="TestSpring01" />
         <module name="TestMyBatis1" />
-        <module name="TestMyBatis02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
