@@ -8,6 +8,7 @@
       <directory url="file://$PROJECT_DIR$/TestMyBatis2/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/TestMyBatis02/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/TestSpring01/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/TestSpringBoot/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -16,6 +17,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TestWebProject" />
         <module name="TestMyBatis02" />
+        <module name="TestSpringBoot" />
         <module name="TestSpring01" />
         <module name="TestMyBatis1" />
       </profile>
